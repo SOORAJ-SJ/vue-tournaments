@@ -1,28 +1,27 @@
 <script setup>
     import { defineProps } from 'vue'
 
-    const props = defineProps(['theme', 'headers', 'data', 'caption'])
+    const props = defineProps(['theme', 'headers', 'rows'])
 </script>
 <template>
     <div class="card shadow-sm px-1 pt-2 my-3 table-responsive">
         <table class="table table-bordered table-striped">
-            <caption class="caption-top">{{ caption }}</caption>
             <thead :class="`table-${theme}`">
                 <tr>
-                    <th>Player</th>
-                    <th>Wins</th>
+                    <th v-for="header in headers">{{ header }}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Name</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td>2</td>
+                <tr v-for="row in rows">
+                    <td v-for="data in row">{{ data }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </template>
+
+<style scoped>
+    th {
+        white-space: nowrap;
+    }
+</style>
