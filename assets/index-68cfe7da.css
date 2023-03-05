@@ -1,4 +1,4 @@
-@charset "UTF-8";:root{--primary: #be98fb}body{background-color:#fafbff!important}.overflow-hidden{overflow:hidden}.card{border:none!important;background-color:#fff!important}/*!
+@charset "UTF-8";:root{--primary: #be98fb}body{background-color:#fafbff!important}#app{min-height:100dvh;min-height:100vh}.overflow-hidden{overflow:hidden}.card{border:none!important;background-color:#fff!important}/*!
 * Bootstrap  v5.2.3 (https://getbootstrap.com/)
 * Copyright 2011-2022 The Bootstrap Authors
 * Copyright 2011-2022 Twitter, Inc.
