@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
+    - name: change directory
+      run: |
+        cd tournaments
     - uses: actions/checkout@v2
     - id: Build-Vue
       uses: xRealNeon/VuePagesAction@1.0.1
