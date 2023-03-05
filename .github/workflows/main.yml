@@ -2,6 +2,10 @@ name: Build Vue
 on: [push]
 permissions: 
   contents: write
+env: 
+  VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+  VITE_GCP_KEY: ${{ secrets.VITE_GCP_KEY }}
+  VITE_GOOGLE_SHEET_ID: ${{ secrets.VITE_GOOGLE_SHEET_ID }}
 jobs: 
   build-and-deploy:
     runs-on: ubuntu-latest
