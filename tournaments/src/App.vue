@@ -1,8 +1,14 @@
 <script setup>
+    import { storeToRefs } from 'pinia';
+    import { STATUSES } from './globals';
+    import { scores } from './stores/scores.store';
+
+    const scoresStore = scores()
+    const { getStatus } = storeToRefs(scoresStore)
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark" v-if="getStatus !== STATUSES.PENDING">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

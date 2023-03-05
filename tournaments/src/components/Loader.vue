@@ -4,7 +4,6 @@
             document.body.classList.add('overflow-hidden')
         },
         beforeUnmount() {
-            console.log('unmounted')
             document.body.classList.remove('overflow-hidden')
         }
     }
