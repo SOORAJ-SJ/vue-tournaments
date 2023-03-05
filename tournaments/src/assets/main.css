@@ -3,6 +3,9 @@
 body {
     background-color: #fafbff !important;
 }
+.overflow-hidden {
+    overflow: hidden;
+}
 .card {
     border: none !important;
     background-color: white !important;

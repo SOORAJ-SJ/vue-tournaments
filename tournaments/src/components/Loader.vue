@@ -1,27 +1,34 @@
-<script setup>
-    import lottieWeb from 'lottie-web'
-    import { onMounted, ref } from 'vue'
-
-    const player = ref(null)
-
-    // lottieWeb.loadAnimation({
-        // container: this.$refs.player,
-        // path: '../assets/images/pint-pong.json',
-        // loop: true,
-        // renderer: 'svg',
-        // autoplay: true
-    // })
-
-    onMounted(() => {
-        lottieWeb.loadAnimation({
-            container: player.value,
-            path: '../assets/images/ping-pong.json',
-            loop: true,
-            renderer: 'svg',
-            autoplay: true
-        })
-    })
+<script>
+    export default {
+        mounted() {
+            document.body.classList.add('overflow-hidden')
+        },
+        beforeUnmount() {
+            console.log('unmounted')
+            document.body.classList.remove('overflow-hidden')
+        }
+    }
 </script>
 <template>
-    <div ref="player"></div>
+    <div id="loader-wrapper">
+        <div class="loader">
+            <img src="../assets/images/animation_200_lesidodc.gif" alt="page loading animation"/>
+        </div>
+    </div>
 </template>
+
+<style scoped>
+    .loader {
+        width: 100vw;
+        height: 100dvh;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1;
+        display: grid;
+        place-content: center;
+        overflow: hidden;
+    }
+</style>
