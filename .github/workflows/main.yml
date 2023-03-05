@@ -6,6 +6,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     environment: github-page-prod
+    env: 
+      VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+      VITE_GCP_KEY: ${{ secrets.VITE_GCP_KEY }}
+      VITE_GOOGLE_SHEET_ID: ${{ secrets.VITE_GOOGLE_SHEET_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
