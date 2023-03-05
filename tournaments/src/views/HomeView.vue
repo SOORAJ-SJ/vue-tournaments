@@ -1,7 +1,6 @@
 <script setup>
-import Loader from '../components/Loader.vue';
-import Table from '../components/Table.vue';
-
+    import Loader from '../components/Loader.vue';
+    import Table from '../components/Table.vue';
 </script>
 
 <template>
