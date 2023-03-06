@@ -30,7 +30,7 @@ export const scores = defineStore('scores', {
                 this.status = STATUSES.SUCCESS
             } catch (err) {
                 this.status = STATUSES.ERROR
-                this.error = err.response.data
+                this.error = err.response.data.error
             }
         }
     }

@@ -5,6 +5,7 @@
     import { scores } from '../stores/scores.store'
     import Loader from '../components/Loader.vue';
     import { STATUSES } from '../globals';
+import Legend from '../components/Legend.vue';
 
     const scoresStore = scores()
     const theme = ['primary', 'warning', 'dark', 'success']
@@ -47,6 +48,7 @@
                     <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
                 </svg>
             </div>
+            <Legend class="mt-3" />
             <Table 
             v-for="(score, index) in getScores" 
             :key="index" 
