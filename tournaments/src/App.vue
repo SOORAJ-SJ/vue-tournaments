@@ -5,11 +5,14 @@
 
 <template>
     <Header />
-    <div class="container">
+    <div class="container app-container">
         <RouterView />
     </div>
     <Footer />
 </template>
 
 <style scoped>
+    .app-container {
+        min-height: calc(100vh - 11rem);
+    }
 </style>

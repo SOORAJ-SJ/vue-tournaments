@@ -11,13 +11,14 @@ export const schedules = defineStore('schedules', {
         }
     },
     getters: {
+        getSchedules: (state) => state.schedules.values,
         getSheduleStatus: (state) => state.status
     },
     actions: {
         async fetchSchedules() {
             try {
                 this.status = STATUSES.LOADING
-                const schedules = await getRange('Shedules!A1:D')
+                const schedules = await getRange('A:D')
                 this.status = STATUSES.SUCCESS
                 this.schedules = schedules.data
             } catch (err) {
