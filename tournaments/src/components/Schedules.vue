@@ -1,15 +1,33 @@
 <script setup>
-import Schedule from './Schedule.vue';
+    import Schedule from './Schedule.vue';
+    import { defineProps, computed } from 'vue'
+    import { formatToRelativeDate, getDateDifference } from '../helpers/functions/helper.functions'
 
+    const props = defineProps(['date', 'matches'])
+    const matchDate = computed(() => {
+        let dateDifference = getDateDifference(props.date)
+        return dateDifference == 0 || dateDifference == 1
+            ? formatToRelativeDate(dateDifference)
+            : props.date
+    })
 </script>
 <template>
-    <div class="card mt-2 shadow-sm px-1 pt-2">
-        <div class="alert alert-success">
-            Today's Matches
+    <div class="card mt-2 shadow-sm p-2">
+        <div class="card-body">
+            <h5 class="card-title schedule-date">
+                {{ matchDate }}
+            </h5>
+            <Schedule v-for="(match, index) in matches" :key="index">
+                <template v-slot:player1>{{ match[0] }}</template>
+                <template v-slot:time>{{ match[2] }}</template>
+                <template v-slot:player2>{{ match[1] }}</template>
+            </Schedule>
         </div>
-        <Schedule schedule="2022-03-03">
-            <template v-slot:player1>Suresh</template>
-            <template v-slot:player2>Naseem</template>
-        </Schedule>
     </div>
 </template>
+
+<style scoped>
+    .schedule-date {
+        text-transform: capitalize;
+    }
+</style>
