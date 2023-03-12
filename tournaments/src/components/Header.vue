@@ -1,18 +1,8 @@
 <script setup>
-    import { storeToRefs } from 'pinia';
-    import { STATUSES } from '../globals';
-    import { schedules } from '../stores/schedules.store';
-    import { scores } from '../stores/scores.store';
-
-    const scoresStore = scores()
-    const schedulesStore = schedules()
-    const { getStatus } = storeToRefs(scoresStore)
-    const { getSheduleStatus } = storeToRefs(schedulesStore)
 </script>
 <template>
     <nav 
-    class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark" 
-    v-if="getStatus !== STATUSES.PENDING || getSheduleStatus !== STATUSES.PENDING">
+    class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark" >
         <div class="container-fluid">
             <router-link to="/" class="navbar-brand">
                 <img src="/trophy.png" width="20"> TT
@@ -27,6 +17,9 @@
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" exactActiveClass="active" to="/schedules">Schedules</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" exactActiveClass="active" to="/events">Events</router-link>
                 </li>
             </ul>
             </div>

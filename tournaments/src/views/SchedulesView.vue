@@ -25,7 +25,6 @@
                     })
             }
         }
-        console.log(schedulesListTemp)
         return schedulesListTemp;
     })
     onMounted(async () => {
