@@ -21,9 +21,7 @@ export const scores = defineStore('scores', {
                 this.status = STATUSES.LOADING
                 const rangesList = [
                     'Sorted Group Standings!D7:O11', 
-                    'Sorted Group Standings!D13:O17',
-                    'Sorted Group Standings!D19:O23',
-                    'Sorted Group Standings!D25:O29',
+                    'Sorted Group Standings!D13:O17'
                 ]
                 const scores = await batchGet(rangesList.join('&ranges='))
                 this.scores = scores.data
