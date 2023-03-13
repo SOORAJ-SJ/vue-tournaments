@@ -19,8 +19,10 @@
             </h5>
             <Schedule v-for="(match, index) in matches" :key="index">
                 <template v-slot:player1>{{ match[0] }}</template>
+                <template v-slot:playerOneScore>{{ match[3] }}</template>
                 <template v-slot:time>{{ match[2] }}</template>
                 <template v-slot:player2>{{ match[1] }}</template>
+                <template v-slot:playerTwoScore>{{ match[4] }}</template>
             </Schedule>
         </div>
     </div>

@@ -18,7 +18,7 @@ export const schedules = defineStore('schedules', {
         async fetchSchedules() {
             try {
                 this.status = STATUSES.LOADING
-                const schedules = await getRange('A:D')
+                const schedules = await getRange('schedules!A:F')
                 this.status = STATUSES.SUCCESS
                 this.schedules = schedules.data
             } catch (err) {

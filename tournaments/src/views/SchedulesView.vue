@@ -34,7 +34,6 @@
 </script>
 <template>
     <main>
-        <Fallback />
         <Loader v-if="getSheduleStatus === STATUSES.LOADING || getSheduleStatus === STATUSES.PENDING" />
         <div 
         v-else-if="getSheduleStatus === STATUSES.ERROR"
