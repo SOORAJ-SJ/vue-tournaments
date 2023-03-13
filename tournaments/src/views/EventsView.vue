@@ -30,7 +30,7 @@
                     <div class="trailing-content d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center my-4 p-2">
                         <div class="announcement-img m-auto mt-4 mt-lg-0">
                             <h2>Official Sponsors</h2>
-                            <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap">
+                            <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap flex-md-nowrap">
                                 <img src="../assets/images/Decathlon_(1).png" alt="decathlon">
                                 <img src="../assets/images/Pringles-Logo-PNG6.png" alt="pringles">
                                 <img src="../assets/images/KFC-Logo-PNG5.png" alt="pringles">
