@@ -16,6 +16,9 @@
                     <router-link class="nav-link" exactActiveClass="active" to="/">Scoreboard</router-link>
                 </li>
                 <li class="nav-item">
+                    <router-link class="nav-link" exactActiveClass="active" to="/results">Results</router-link>
+                </li>
+                <li class="nav-item">
                     <router-link class="nav-link" exactActiveClass="active" to="/schedules">Schedules</router-link>
                 </li>
                 <li class="nav-item">
