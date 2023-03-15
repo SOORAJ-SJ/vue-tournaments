@@ -12,15 +12,6 @@
                         <p class="m-auto">
                             Who Will Take Home the Trophy? Our Prediction for the singles Table Tennis Tournament Finalist Winner
                         </p>
-                        <div class="my-2">
-                            <a 
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScB3edYfSiMpapR98muEnsb1hBsjVpS4FSu9eofSuXonKf7Lw/viewform?usp=sf_link" 
-                            class="btn btn-outline-info"
-                            target="_blank">Click Here!</a>
-                            <p class="m-auto">
-                                *Prediction contest will be closed at <span class="text-warning">6:30PM</span> today!
-                            </p>
-                        </div>
                     </div>
                     <div class="content-img my-4">
                         <div>
