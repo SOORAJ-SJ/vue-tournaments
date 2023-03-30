@@ -26,4 +26,4 @@ jobs:
           folder: 'tournaments/dist'
       - name: Post Build Actions
         run: echo "${deployment_status}"
-        if: ${{ cancelled() }}
+        if: ${{ success() }}
