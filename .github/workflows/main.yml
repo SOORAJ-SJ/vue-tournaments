@@ -25,4 +25,4 @@ jobs:
         with: 
           folder: 'tournaments/dist'
       - name: Post Build Actions
-        run: echo "::deployment_status"
+        run: echo "${deployment_status}"
