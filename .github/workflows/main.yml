@@ -25,7 +25,7 @@ jobs:
         with: 
           folder: 'tournaments/dist'
       - name: Build success notification
-        if: ${{ jobs.build-and-deploy.env.deployment_status == 'skipped' }}
+        if: ${{ env.deployment_status == 'skipped' }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
