@@ -24,3 +24,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
           folder: 'tournaments/dist'
+      - name: Post Build Actions
+        run: echo "finished ::$deployment_status"
