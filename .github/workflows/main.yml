@@ -25,17 +25,24 @@ jobs:
         with: 
           folder: 'tournaments/dist'
       - name: Build success notification
+        if: ${{ env.deployment_status == 'success' }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: A new update have been deployed \x1F680	 https://sooraj-sj.github.io/vue-tournaments/
+      - name: Build skip notification
         if: ${{ env.deployment_status == 'skipped' }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: A new update have been built and deployed https://sooraj-sj.github.io/vue-tournaments/
+          message: Skipped deployment since there are no changes.
       - name: Build failure notification
-        if: ${{ failure() }}
+        if: ${{ env.deployment_status == 'failed' }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: Deployment failure.
+          message: Deployment failed due to an unexpected error. Please check workflow runs for more info.
         
