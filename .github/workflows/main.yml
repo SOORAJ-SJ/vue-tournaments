@@ -26,4 +26,3 @@ jobs:
           folder: 'tournaments/dist'
       - name: Post Build Actions
         run: echo "deployment_status"
-        if: ${{ deployment_status == 'skipped' }}
