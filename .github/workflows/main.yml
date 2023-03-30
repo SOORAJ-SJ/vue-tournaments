@@ -30,14 +30,14 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: A new update have been deployed \x1F680 https://sooraj-sj.github.io/vue-tournaments/
+          message: A new update have been deployed https://sooraj-sj.github.io/vue-tournaments/
       - name: Build skip notification
         if: ${{ env.deployment_status == 'skipped' }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: Skipped a deployment since there are no changes \x1F680.
+          message: Skipped a deployment since there are no changes.
       - name: Build failure notification
         if: ${{ env.deployment_status == 'failed' }}
         uses: appleboy/telegram-action@master
