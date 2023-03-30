@@ -25,5 +25,5 @@ jobs:
         with: 
           folder: 'tournaments/dist'
       - name: Post Build Actions
-        if: ${{ deployment_status == 'skipped' }}
+        if: ${{ ::deployment_status == 'skipped' }}
         run: echo "skipped deployment"
